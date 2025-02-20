@@ -13,7 +13,8 @@ def groupAnagrams(strs):
 
 if __name__ == "__main__":
     # 输入字符串列表
-    input_str = input("请输入字符串列表，用逗号分隔（例如：eat,tea,tan）: ")
+    input_str = input()
+    input_str = input_str.strip('[]')
     # 将输入的字符串转换为列表
     strs = input_str.split(',')
     # 调用 groupAnagrams 函数进行分组

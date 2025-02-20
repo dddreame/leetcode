@@ -5,13 +5,13 @@ def moveZeroes(nums):
             nums[slow], nums[fast] = nums[fast], nums[slow]
             slow += 1
 
-input_str = input()
-nums_list = input_str.split(',')
-nums = [int(num) for num in nums_list]
+nums_str = input()
+nums_str = nums_str.strip('[]')
+nums = [int(num) for num in nums_str.split(',')]
 moveZeroes(nums)
 print("移动零后的列表:", nums)
 
-
+	
 
 # class Solution:
 # def moveZeroes(self, nums: list[int]) -> None:

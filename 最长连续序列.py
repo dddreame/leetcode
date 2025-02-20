@@ -14,10 +14,12 @@ def longestConsecutive(nums):
             ans = max(ans, current_streak)
     return ans
 
-
-# 自定义输入
-nums = [100, -4, -200, 1, 3, 2]
-# 调用函数计算结果
-result = longestConsecutive(nums)
-# 输出结果
-print("最长连续序列的长度是:", result)
+if __name__ == "__main__":
+    # 自定义输入
+    num_str = input()
+    num_str = num_str.strip('[]')
+    nums = [int(num) for num in num_str.split(',')]
+    # 调用函数计算结果
+    result = longestConsecutive(nums)
+    # 输出结果
+    print("最长连续序列的长度是:", result)

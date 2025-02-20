@@ -10,8 +10,8 @@ def two_sum(nums, target):
 if __name__ == "__main__":
  # 输入数组
  nums_str = input()
- nums_list = nums_str.split(',')
- nums = [int(num) for num in nums_list]
+ nums_str = nums_str.strip('[]')
+ nums = [int(num) for num in nums_str.split(',')]
  target_str = input("请输入目标值: ")
  target = int(target_str)
 
@@ -19,7 +19,4 @@ if __name__ == "__main__":
  result = two_sum(nums, target)
 
  # 输出结果
- if result:
-    print(f"输出: [{result[0]}, {result[1]}]")
-else:
-    print("没有找到解决方案")
+print(f"[{result[0]}, {result[1]}]")
