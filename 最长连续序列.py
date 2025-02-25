@@ -1,3 +1,5 @@
+import ast
+
 def longestConsecutive(nums):
     num_set = set(nums)
     ans = 0
@@ -16,9 +18,8 @@ def longestConsecutive(nums):
 
 if __name__ == "__main__":
     # 自定义输入
-    num_str = input()
-    num_str = num_str.strip('[]')
-    nums = [int(num) for num in num_str.split(',')]
+    nums = ast.literal_eval(input())
+     
     # 调用函数计算结果
     result = longestConsecutive(nums)
     # 输出结果

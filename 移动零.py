@@ -1,3 +1,5 @@
+import ast
+
 def moveZeroes(nums):
     slow = 0
     for fast in range(len(nums)):
@@ -5,9 +7,8 @@ def moveZeroes(nums):
             nums[slow], nums[fast] = nums[fast], nums[slow]
             slow += 1
 
-nums_str = input()
-nums_str = nums_str.strip('[]')
-nums = [int(num) for num in nums_str.split(',')]
+nums = ast.literal_eval(input())
+ 
 moveZeroes(nums)
 print("移动零后的列表:", nums)
 
